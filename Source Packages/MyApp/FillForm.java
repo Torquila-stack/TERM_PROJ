@@ -257,7 +257,7 @@ public class FillForm extends javax.swing.JFrame {
             int age = b.getAge();
             String marital = b.getSecond().getmStatus();
             
-            model=(DefaultTableModel)inJTable.getjTable1().getModel();
+            model=(DefaultTableModel)tab.getTable().getModel();
             model.insertRow(model.getRowCount(), new Object[]{famSize, fullName, age, marital});
         }
         
