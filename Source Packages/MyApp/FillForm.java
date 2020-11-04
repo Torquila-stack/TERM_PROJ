@@ -243,8 +243,25 @@ public class FillForm extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextField5ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-         // View the JTable class and form.
-            new JTable().setVisible(true);
+        // View the JTable class and form.
+        inJTable tab = new inJTable();
+        DefaultTableModel model = (DefaultTableModel) tab.getTable().getModel(); //Cannot reference to non-static method yet
+        model.setRowCount(0);
+
+        for (StoredPass b:fills) {
+         
+            String firstName = b.getFirstName(); String lastName = b.getLastName();
+            
+            int famSize = b.getSecond().getHouseSize();
+            String fullName = firstName + " " + lastName;
+            int age = b.getAge();
+            String marital = b.getSecond().getmStatus();
+            
+            model=(DefaultTableModel)inJTable.getjTable1().getModel();
+            model.insertRow(model.getRowCount(), new Object[]{famSize, fullName, age, marital});
+        }
+        
+        new inJTable().setVisible(true);
     }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
