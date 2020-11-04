@@ -176,5 +176,17 @@ public class JTable extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTable1;
     // End of variables declaration//GEN-END:variables
+    
+    /**
+     *
+     * @return
+     */
+     public  javax.swing.JTable getjTable1(){
+        return jTable1;
+    }
+    
+    public void setjTable1(javax.swing.JTable jTable1){
+        this.jTable1 = jTable1;
+    }
 }
 
