@@ -244,7 +244,8 @@ public class FillForm extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextField5ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
+         // View the JTable class and form.
+            new JTable().setVisible(true);
     }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
