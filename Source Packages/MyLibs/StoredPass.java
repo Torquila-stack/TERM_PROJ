@@ -15,7 +15,7 @@ public class StoredPass {
     private int age;
     private SecInfo second;
     
-     public void stored(String firstName, String lastName, int age) {
+     public StoredPass(String firstName, String lastName, int age) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.age = age;
