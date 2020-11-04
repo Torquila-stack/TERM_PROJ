@@ -220,7 +220,8 @@ public class FillForm extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // Process the submit button
-        
+        fill = new StoredPass(jTextField1.getText(), jTextField2.getText(), Integer.parseInt(jTextField3.getText()));
+        fill.setSecond(new SecInfo(jTextField4.getText(), Integer.parseInt(jTextField5.getText())));
         
     }//GEN-LAST:event_jButton1ActionPerformed
 
