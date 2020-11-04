@@ -6,6 +6,7 @@
 package MyApp;
 
 import javax.swing.JFrame;
+import javax.swing.JTable;
 
 /**
  *
@@ -184,11 +185,11 @@ public class JTable extends javax.swing.JFrame {
      *
      * @return
      */
-     public  javax.swing.JTable getjTable1(){
+     public JTable getjTable1(){
         return jTable1;
     }
     
-    public void setjTable1(javax.swing.JTable jTable1){
+    public void setjTable1(JTable jTable1){
         this.jTable1 = jTable1;
     }
 }
