@@ -16,6 +16,7 @@ import javax.swing.table.DefaultTableModel;
  */
 public class FillForm extends javax.swing.JFrame {
     
+    String sMarital = "single"; //For display
     //add Arraylist
     FillForm fill;
     ArrayList <FillForm> fills = new ArrayList <FillForm> ();
@@ -226,7 +227,8 @@ public class FillForm extends javax.swing.JFrame {
         } else {
         
         fill = new StoredPass(jTextField1.getText(), jTextField2.getText(), Integer.parseInt(jTextField3.getText()));
-        fill.setSecond(new SecInfo(jTextField4.getText(), Integer.parseInt(jTextField5.getText())));
+        fill.setSecond(Integer.parseInt(jTextField5.getText())));
+        fill.getSecond().setmMarital(sMarital);
             
             try {
                 fills.add(fill);
@@ -255,7 +257,7 @@ public class FillForm extends javax.swing.JFrame {
             int famSize = b.getSecond().getHouseSize();
             String fullName = firstName + " " + lastName;
             int age = b.getAge();
-            String marital = b.getSecond().getmStatus();
+            String marital = b.getSecond().getmMarital();
             
             model=(DefaultTableModel)jTable.getTable().getModel();
             model.insertRow(model.getRowCount(), new Object[]{famSize, fullName, age, marital});
@@ -263,7 +265,17 @@ public class FillForm extends javax.swing.JFrame {
         
         new inJTable().setVisible(true);
     }//GEN-LAST:event_jButton2ActionPerformed
-
+    
+    private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {                                           
+        //Process
+        if(jComboBox1.getSelectedIndex() == 0) {
+           sMarital = ("single");
+        }
+         else if(jComboBox1.getSelectedIndex() == 1) {
+           sMarital = "married";
+        }
+    } 
+    
     /**
      * @param args the command line arguments
      */
