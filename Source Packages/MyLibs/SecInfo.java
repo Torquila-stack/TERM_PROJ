@@ -11,19 +11,22 @@ package MyLibs;
  */
 public class SecInfo {
     
-    private String mStatus;
+    private String mMarital;
     private int houseSize;
     
 
-    public String getmStatus() {
-        return mStatus;
+    public String getmMarital() {
+        return mMarital;
+    }
+
+    public void setmMarital(String mMarital) {
+        this.mMarital = mMarital;
     }
 
     public int getHouseSize() {
         return houseSize;
     }
-    public SecInfo (String mStatus, int houseSize) {
-        this.mStatus = mStatus;
+    public SecInfo (int houseSize) {
         this.houseSize = houseSize;
     }
     
