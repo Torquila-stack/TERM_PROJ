@@ -227,16 +227,15 @@ public class FillForm extends javax.swing.JFrame {
         
         fill = new StoredPass(jTextField1.getText(), jTextField2.getText(), Integer.parseInt(jTextField3.getText()));
         fill.setSecond(new SecInfo(jTextField4.getText(), Integer.parseInt(jTextField5.getText())));
-        
-        }
+            
             try {
                 fills.add(fill);
                 JOptionPane.showMessageDialog(this, "You are qualified! Input submitted");
 
              } catch (Exception e){
                 JOptionPane.showMessageDialog(this, e.getMessage());
-        }
-        
+            }
+       }   
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jTextField5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField5ActionPerformed
