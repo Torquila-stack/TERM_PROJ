@@ -14,11 +14,18 @@ public class StoredPass {
     private String lastName;
     private int age;
     private SecInfo second;
+    
+     public void stored(String firstName, String lastName, int age) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.age = age;
+    }
 
     public String getFirstName() {
         return firstName;
     }
 
+    /* //Inactive
     public void setFirstName(String firstName) {
         this.firstName = firstName;
     }
@@ -30,6 +37,9 @@ public class StoredPass {
     public void setLastName(String lastName) {
         this.lastName = lastName;
     }
+    */
+    
+    /*
 
     public int getAge() {
         return age;
@@ -38,6 +48,7 @@ public class StoredPass {
     public void setAge(int age) {
         this.age = age;
     }
+    */
 
     public SecInfo getSecond() {
         return second;
