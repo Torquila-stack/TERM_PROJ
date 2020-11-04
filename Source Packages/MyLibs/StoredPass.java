@@ -42,11 +42,5 @@ public class StoredPass {
     public SecInfo getSecond() {
         return second;
     }
-
-    public void setSecond(SecInfo second) {
-        this.second = second;
-    }
-    
-    
 }
 
