@@ -5,6 +5,8 @@
  */
 package MyApp;
 
+import javax.swing.JFrame;
+
 /**
  *
  * @author TorQuiLa
@@ -16,6 +18,7 @@ public class JTable extends javax.swing.JFrame {
      */
     public JTable() {
         initComponents();
+         this.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
     }
 
     /**
@@ -164,7 +167,7 @@ public class JTable extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new JTable().setVisible(true);
+                //new JTable().setVisible(true); DISREGARD
             }
         });
     }
