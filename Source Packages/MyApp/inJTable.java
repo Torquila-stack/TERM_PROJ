@@ -16,6 +16,7 @@ public class inJTable extends javax.swing.JFrame {
 
     FillForm fForm;
      int counter = 0;
+    
     /**
      * Creates new form JTable
      */
@@ -23,6 +24,15 @@ public class inJTable extends javax.swing.JFrame {
         initComponents();
         jTextField1.setText(Integer.toString(counter));
         this.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
+    }
+    
+    public void sCounter(){ //dont know where to use this.
+        for(int row = 0; row < jTable1.getRowCount(); row++) {
+                    for(int col = 0; col < jTable1.getColumnCount(); col++) {
+                        if (jTable1.getValueAt(row, col).equals("single") )
+                            counter++;
+                    } 
+                } 
     }
 
     /**
