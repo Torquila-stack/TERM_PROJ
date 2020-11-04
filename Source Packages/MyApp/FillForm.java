@@ -220,8 +220,22 @@ public class FillForm extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // Process the submit button
+        if (Integer.parseInt(jTextField3.getText()) <= 21 || Integer.parseInt(jTextField3.getText()) >= 60 ) {
+            //JOptionPane.showMessageDialog(this, "Not qualified for a quarantine pass!");
+             JOptionPane.showMessageDialog(null, "You are not qualified", "Sorry!", JOptionPane.ERROR_MESSAGE); 
+        } else {
+        
         fill = new StoredPass(jTextField1.getText(), jTextField2.getText(), Integer.parseInt(jTextField3.getText()));
         fill.setSecond(new SecInfo(jTextField4.getText(), Integer.parseInt(jTextField5.getText())));
+        
+        }
+            try {
+                fills.add(fill);
+                JOptionPane.showMessageDialog(this, "You are qualified! Input submitted");
+
+             } catch (Exception e){
+                JOptionPane.showMessageDialog(this, e.getMessage());
+        }
         
     }//GEN-LAST:event_jButton1ActionPerformed
 
