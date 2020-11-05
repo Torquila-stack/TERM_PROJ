@@ -24,7 +24,7 @@ public class FillForm extends javax.swing.JFrame {
     StoredPass fimp; //for Last Name //Testing
     StoredPass fill; SecInfo fip;
     ArrayList <StoredPass> fills = new ArrayList <StoredPass> ();
-    ArrayList <StoredPass> lastName = new ArrayList <StoredPass> (); //testing
+    //ArrayList <StoredPass> lastName = new ArrayList <StoredPass> (); //testing DISREGARD
     inJTable jTable = new inJTable();
     
     DefaultTableModel model = (DefaultTableModel) jTable.getTable().getModel(); //intializer
