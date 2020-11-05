@@ -263,37 +263,33 @@ public class FillForm extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // Process the submit button
-        int bla = 0;
-        bla = 0;
-        
-        //verify(); 
-        
-        for (int i=0; i<fills.size(); i++ ){
-            if(fill.getLastName().equals(fills.get(i).getLastName())){
-                 bla = 1;
-            }
-            
-        }
-        
-        if (bla == 1) { 
-             JOptionPane.showMessageDialog(null, "Last name already registered!" , "Sorry!", JOptionPane.ERROR_MESSAGE);
-        }
-         if (Integer.parseInt(jTextField3.getText()) <= 21 || Integer.parseInt(jTextField3.getText()) >= 60 || bla == 1) {
+        int bla = 1;
+       
+         if (Integer.parseInt(jTextField3.getText()) <= 21 || Integer.parseInt(jTextField3.getText()) >= 60) {
             //JOptionPane.showMessageDialog(this, "Not qualified for a quarantine pass!");
-             JOptionPane.showMessageDialog(null, "You are not qualified", "Sorry!", JOptionPane.ERROR_MESSAGE);
+             JOptionPane.showMessageDialog(null, "You are not qualified.", "Sorry!", JOptionPane.ERROR_MESSAGE);
         } else {
              
         fill = new StoredPass(jTextField1.getText(), jTextField2.getText(), Integer.parseInt(jTextField3.getText()));
         fill.setSecond(new SecInfo(Integer.parseInt(jTextField5.getText())));
         fill.getSecond().setmMarital(sMarital);
+        //verify(); 
+        for (int i = 0; i < fills.size(); i++ ){
+            if(fill.getLastName().equals(fills.get(i).getLastName())){
+                 bla = 0;
+            }
+        }
                 
             try {
+               if (bla == 1){
                 fills.add(fill);
                 JOptionPane.showMessageDialog(this, "You are qualified! Input submitted");
                   if (sMarital == "single") {
                     singleCounter++;
-                }
-
+                  }
+                } else {
+                    JOptionPane.showMessageDialog(null, "Last name already registered!" , "Sorry!", JOptionPane.ERROR_MESSAGE);
+               }
              } catch (Exception e){
                 JOptionPane.showMessageDialog(this, e.getMessage());
         }
