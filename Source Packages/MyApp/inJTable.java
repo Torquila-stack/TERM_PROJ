@@ -21,7 +21,7 @@ public class inJTable extends javax.swing.JFrame {
      */
     public inJTable() {
         initComponents();
-  
+        jTable1.setAutoCreateRowSorter(true);
         this.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
     }
     
