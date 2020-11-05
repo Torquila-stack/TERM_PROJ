@@ -7,6 +7,7 @@ package MyApp;
 
 import javax.swing.JFrame;
 import javax.swing.JTable;
+import javax.swing.JTextField;
 
 /**
  *
@@ -15,26 +16,15 @@ import javax.swing.JTable;
 public class inJTable extends javax.swing.JFrame {
 
     FillForm fForm;
-     int counter = 0;
-    
     /**
      * Creates new form JTable
      */
     public inJTable() {
         initComponents();
-        jTextField1.setText(Integer.toString(counter));
+  
         this.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
     }
     
-    public void sCounter(){ //dont know where to use this.
-        for(int row = 0; row < jTable1.getRowCount(); row++) {
-                    for(int col = 0; col < jTable1.getColumnCount(); col++) {
-                        if (jTable1.getValueAt(row, col).equals("single") )
-                            counter++;
-                    } 
-                } 
-    }
-
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -209,6 +199,11 @@ public class inJTable extends javax.swing.JFrame {
     public void setTable(JTable jTable1){
         this.jTable1 = jTable1;
     }
+    
+    public JTextField getjTextField1() {
+        return jTextField1;
+    }
+    
 }
 
 
